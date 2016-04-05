@@ -48,7 +48,7 @@ public:
 
         /*
          * life gameをはじめる。
-         * 無限リピートだからプロセスを強制終了して終わらせる。
+         * 無限ループだからプロセスを強制終了して終わらせる。
          */
         void start() {
                 string tmp[height][width];
