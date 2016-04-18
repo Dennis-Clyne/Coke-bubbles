@@ -14,8 +14,8 @@ class life {
         // dying, livingはそれぞれの状態で表示される記号
         const string dying = DYING, living = LIVING;
         const string cell[2] = {dying, living};
+        const int width, height;
 
-        int width, height;
         int livingRule, birthRule;
         vector<vector<string>> field;
 
@@ -26,9 +26,8 @@ public:
          * 引数にフィールドの縦と横のマス数を取る。
          * 全てのセルの生死をランダムに初期化する。
          */
-        life(int argWidth = 150, int argHeight = 80) {
-                width = argWidth + 2;
-                height = argHeight + 2;
+        life(int argWidth = 150, int argHeight = 80) 
+        : width(argWidth + 2), height(argHeight + 2) {
 
                 field.resize(height);
                 for (int i = 0; i < height; i++) {
